@@ -1,0 +1,43 @@
+.clean-block.clean-hero:before{
+    /*background-image: linear-gradient(to right top, #a2beeb, #8ecfee, #8edde5, #a4e7d5, #c7eec7) !important;*/
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) !important;
+    z-index: 0;
+}
+.getting-started-info{
+    text-align: justify!important;
+}
+.block-heading{
+    padding-top: 0px!important;
+}
+
+.instructions{
+    padding-top:20px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.btn-primary{
+    height: 50px;
+    width: 350px;
+    background-color: #2f54a5!important ;
+    border-color: white!important;
+}
+.btn-primary:hover{
+    background-image: -webkit-linear-gradient(left, #c83234 0%, #800080 50%) !important;
+}
+.file-down{
+    margin: inherit!important;
+    max-width: inherit!important;
+    background-color: inherit !important;
+    box-shadow: unset !important;
+    border-top: unset !important;
+    padding:0 0 16px 0 !important;
+}
+
+.down{
+    background-color: transparent;
+    border: transparent;
+    padding:0;
+    cursor: pointer;
+    text-decoration: underline;
+}

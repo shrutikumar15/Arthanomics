@@ -1,0 +1,15 @@
+.btn-primary{
+    height: 50px;
+    width: 350px;
+    background-color: #2f54a5!important ;
+    border-color: white!important;
+}
+.btn-primary:hover{
+   
+    background-image: -webkit-linear-gradient(left, #c83234 0%, #800080 50%) !important;
+   
+    
+}
+.instructions{
+    padding-top: 40px;
+}

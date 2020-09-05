@@ -1,0 +1,346 @@
+.col1{
+    background-image: url('/assets/img/Collaborations/C1.png');
+}
+
+.collab{
+    
+}
+
+
+
+@media (min-width:800px){
+    .collab{
+      display: flex;
+    } 
+    .cimg{
+        width:50vw;
+    }
+   
+}
+
+@media (max-width:799px){
+    .cimg{
+        max-height: 500px;
+       max-width: 100vw;
+    }
+}
+
+
+.img1{
+    
+}
+
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+
+.containerr {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 20px 20px;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: 0 5% ;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin: 1rem;
+    width: 300px;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+
+.gallery-item figcaption{
+    
+        padding: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    
+}
+
+/* Parent Container */
+.content_img{
+    position: relative;
+   
+    float: left;
+    margin-right: 10px;
+   }
+   
+   /* Child Text Container */
+   .content_img div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 1;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+   }
+   
+   /* Hover on Parent Container */
+   .content_img:hover{
+    cursor: pointer;
+   }
+   
+   .content_img:hover div{
+    width: 300px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+   }
+   
+
+
+
+
+
+
+   
+/* popup */
+
+.popup{
+    width: 100%;
+    height: 100vh;
+    display: none;
+  
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+  }
+  
+  #popup-article:target{
+    display: flex;
+  }
+  #collab1:target{
+      display: flex;
+  }
+  #collab2:target{
+    display: flex;
+}
+
+
+#collab3:target{
+    display: flex;
+}
+#collab4:target{
+    display: flex;
+}
+#collab5:target{
+    display: flex;
+}
+#collab6:target{
+  display: flex;
+}
+#collab7:target{
+  display: flex;
+}
+#collab8:target{
+  display: flex;
+}
+
+#collab9:target{
+  display: flex;
+}
+#collab10:target{
+  display: flex;
+}
+
+  
+  .popup:before{
+    content: "";
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+  
+    position: fixed;
+    left: 0;
+    top: 50%;
+    will-change: height, top;
+    animation: open-animation .6s cubic-bezier(0.83, 0.04, 0, 1.16) .65s both;
+  }
+  
+  .popup:after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #f0f0f0;
+  
+    will-change: width, opacity;
+    animation: line-animation .6s cubic-bezier(0.83, 0.04, 0, 1.16) both;
+  
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+  }
+  
+  @keyframes line-animation{
+  
+    0%{
+      width: 0;
+      opacity: 1;
+    }
+  
+    99%{
+      width: 100%;
+      opacity: 1;
+    }
+  
+    100%{
+      width: 100%;
+      opacity: 0;
+    }  
+  }
+  
+  @keyframes open-animation{
+  
+    0%{
+      height: 0;
+      top: 50%;
+    }
+  
+    100%{
+      height: 100vh;
+      top: 0;
+    }
+  }
+  
+  .popup__block{
+    height: calc(100vh - 40px);
+    padding: 10% 15%;
+    box-sizing: border-box;
+    position: relative;
+    
+    margin: auto;
+    overflow: auto;
+    animation: fade .5s ease-out 1.3s both;
+  }
+  
+  @keyframes fade{
+  
+    0%{
+      opacity: 0;
+    }
+  
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  .popup__title{
+    font-size: 2.5rem;
+    margin: 0 0 1em;
+    color: #2f54a5;
+  }
+  
+  .popup__close{
+    width: 3.2rem;
+    height: 3.2rem;
+    text-indent: -9999px;
+    color: #2f54a5;
+    position: fixed;
+    top: 120px;
+    right: 20px;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTE5IDYuNDFMMTcuNTkgNSAxMiAxMC41OSA2LjQxIDUgNSA2LjQxIDEwLjU5IDEyIDUgMTcuNTkgNi40MSAxOSAxMiAxMy40MSAxNy41OSAxOSAxOSAxNy41OSAxMy40MSAxMnoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);
+  }
+  
+  
+
+ 
+  
+  p{
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  p:not(:last-child){
+    margin-bottom: 1.5rem;
+  }
+  
+  
+
+  
+  .open-popup{
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border: 1px solid;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  .open-popup:hover{
+      text-decoration: none;
+      color: white;
+  }
+  .page{
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  .page__container{
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;  
+    margin: auto;
+  }
+  
+  
+  
+   

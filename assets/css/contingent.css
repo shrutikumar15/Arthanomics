@@ -1,0 +1,18 @@
+.event-title{
+    font-size: 30px !important;
+}
+.form-check-label{
+    font-size: 20px !important;
+    padding-left: 10px;
+    color: #2f54a5;
+}
+input[type='checkbox'] {
+    width:20px;
+    height:20px;
+}
+input[type='file'] {
+    background: transparent;
+}
+input[type='checkbox']:checked {
+    background:  #007bff;
+}

@@ -1,0 +1,181 @@
+                                    CONTINGENT
+##############################################################################################################################################
+contingent_id | contingent_name | no_of_members | multi_single | payment_id |c_identity_verified| participant_id_pic | payment_pic | payment_verified  
+#############################################################################################################################################
+
+                                   CONTINGENT_PARTICIPANT
+##############################################################################################################################################
+c_participant_id | c_participant_name | c_participant_email | c_participant_phone | isLeader
+#############################################################################################################################################
+
+                                   INDIVIDUAL_PARTICIPANT
+#############################################################################################################################################
+i_participant_id | i_participant_name | i_participant_email | i_participant_phone | i_identity_verified | payment_id | payment_pic | payment_verified  
+############################################################################################################################################
+
+                                   EVENT
+#############################################################################################################################################
+event_id | event_name | event_cap | current_no_participants   
+#############################################################################################################################################
+
+                                   TEAM
+#############################################################################################################################################
+team_id | team_name | participant_id |    
+#############################################################################################################################################
+
+                                   CONTINGENT-EVENT-TEAM
+#############################################################################################################################################
+contingent_id | team_id | event_id
+#############################################################################################################################################
+
+
+CREATE TABLE contingent (
+contingent_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+contingent_name VARCHAR(30) NOT NULL,
+no_of_members INT NOT NULL,
+multi_single VARCHAR(30) NOT NULL
+); 
+
+
+CREATE TABLE contingent_participant(
+c_participant_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+c_participant_name VARCHAR(30) NOT NULL,
+c_participant_email VARCHAR(30) NOT NULL,
+c_participant_phone INT(10) NOT NULL
+);
+
+
+CREATE TABLE scoreboard(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+arthanomicsassembly VARCHAR(30) NOT NULL,
+caseconundrum VARCHAR(30) NOT NULL,
+comiccatalysis VARCHAR(30) NOT NULL,
+doomanddestiny VARCHAR(30) NOT NULL,
+journalisminjeopardy VARCHAR(30) NOT NULL,
+marketingmaestros VARCHAR(30) NOT NULL,
+policypandemonium VARCHAR(30) NOT NULL,
+powerplay VARCHAR(30) NOT NULL,
+stockitup VARCHAR(30) NOT NULL,
+thesnaptheory VARCHAR(30) NOT NULL,
+tycoonsoftomorrow VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE scoreboardname(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+arthanomicsassembly VARCHAR(30) NOT NULL,
+caseconundrum VARCHAR(30) NOT NULL,
+comiccatalysis VARCHAR(30) NOT NULL,
+doomanddestiny VARCHAR(30) NOT NULL,
+journalisminjeopardy VARCHAR(30) NOT NULL,
+marketingmaestros VARCHAR(30) NOT NULL,
+policypandemonium VARCHAR(30) NOT NULL,
+powerplay VARCHAR(30) NOT NULL,
+stockitup VARCHAR(30) NOT NULL,
+thesnaptheory VARCHAR(30) NOT NULL,
+tycoonsoftomorrow VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE scoreboardtext(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+arthanomicsassembly VARCHAR(30) NOT NULL,
+caseconundrum VARCHAR(30) NOT NULL,
+comiccatalysis VARCHAR(30) NOT NULL,
+doomanddestiny VARCHAR(30) NOT NULL,
+journalisminjeopardy VARCHAR(30) NOT NULL,
+marketingmaestros VARCHAR(30) NOT NULL,
+policypandemonium VARCHAR(30) NOT NULL,
+powerplay VARCHAR(30) NOT NULL,
+stockitup VARCHAR(30) NOT NULL,
+thesnaptheory VARCHAR(30) NOT NULL,
+tycoonsoftomorrow VARCHAR(30) NOT NULL
+);
+
+Insert into scoreboard values(1,'No','No','No','No','No','No','No','No','No','No','No');
+Insert into scoreboardtext values(1,'No','No','No','No','No','No','No','No','No','No','No');
+Insert into scoreboardname values(1,'-','-','-','-','-','-','-','-','-','-','-');
+
+
+
+
+ALTER TABLE individual_participant ADD COLUMN date_added date AFTER id_verified
+UPDATE individual_participant SET date_added = curdate()
+
+ALTER TABLE individual_participant ADD COLUMN payment_done VARCHAR(30) AFTER date_added
+UPDATE individual_participant Where contingent_name='' SET payment_done = 'No'
+
+SELECT * FROM individual_participant WHERE DATEDIFF( CURDATE(), individual_participant.date_added) <= 2
+
+
+
+
+
+CREATE TABLE leaderboard(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+rank INT 
+);
+
+ 
+
+Insert into leaderboard (`name`,`rank`) values('-',0);
+
+CREATE TABLE powerplay(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into powerplay (`name`) values('-');
+CREATE TABLE comiccatalysis(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into comiccatalysis (`name`) values('-');
+CREATE TABLE comiccatalysis(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE caseconundrum(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into caseconundrum (`name`) values('-');
+CREATE TABLE thesnaptheory(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into thesnaptheory (`name`) values('-');
+CREATE TABLE doomanddestiny(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into doomanddestiny (`name`) values('-');
+CREATE TABLE arthanomicsassembly(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into arthanomicsassembly (`name`) values('-');
+CREATE TABLE marketingmaestros(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into marketingmaestros (`name`) values('-');
+CREATE TABLE policypandemonium(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into policypandemonium (`name`) values('-');
+CREATE TABLE journalisminjeopardy(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into journalisminjeopardy (`name`) values('-');
+CREATE TABLE tycoonsoftomorrow(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL
+);
+Insert into tycoonsoftomorrow (`name`) values('-');
+CREATE TABLE contingent_name (
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+taken VARCHAR(30) NOT NULL
+); 

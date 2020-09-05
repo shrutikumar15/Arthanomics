@@ -1,0 +1,406 @@
+
+.imgContainer{
+    height: inherit;
+}
+.imgContainer>img{
+    height: inherit;
+}
+a:hover{
+    text-decoration: none;
+}
+.text-event{
+  display: inline-block;
+  /* margin-bottom: .5rem; */
+  background: white;
+  width: 100%;
+  font-size: 25px;
+  text-align: center;
+  margin:25px 0 10px 0;
+ 
+}
+.txtLabel{
+    width: 80%;
+    /* margin: 0 auto; */
+    margin-left: 10%;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: large;
+}
+.button {
+    font-size: 1em;
+    padding: 10px;
+    color: black;
+    background-color:#2f54a5 !important;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    background-image: -webkit-linear-gradient(left, #c83234 0%, #800080 50%, transparent 50%) !important;
+    
+    background-position: 100% 0 !important;
+    background-size: 200% 200% !important;
+    color: transparent !important;
+  
+    -webkit-transition: .1s .2s !important;
+    -webkit-background-clip: text !important;
+  }
+  .button:hover {
+    
+    background-position: 0 0 !important;
+    color: transparent !important;
+    transition: .4s 0 !important;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    overflow-x: scroll;
+  }
+  
+  .popup {
+    margin: 120px auto;
+    padding: 50px;
+    background: #fff;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  span.dets{
+    color:darkblue
+  }
+ 
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #2f54a5;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  img{
+    cursor: pointer; 
+  }
+  .clean-block .content{
+    box-shadow: 0 0px 10px rgba(0,0,0,0.01) !important;
+  }
+  .block-heading{
+    padding:20px !important;
+  }
+  .clean-block{
+    padding-bottom: 30px !important;
+  }
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  
+/* mobile */
+@media  screen and (max-width: 769px) {
+    .block-heading{
+       
+    }
+    .frow{
+        width: 100%;
+        height: 200px;
+        display: inline;
+
+        margin-bottom: 30px;
+       
+    }
+    .imgContainer{
+      display: inline;
+    }
+    .popup{
+      padding:20px;
+      overflow: scroll;
+      width:100%;
+    }
+    .popup.content{
+      overflow: scroll;
+    }
+}
+/* desktop */
+@media only screen and (min-width: 768px) {
+  
+    .frow{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+    }
+    #second.frow{
+        justify-content: safe;
+    }
+    div#imgMarg1{
+        margin-left: 130px;
+    }
+    div#imgMarg2{
+        margin-right: 130px;
+    }
+}
+
+
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+th  {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #fff;
+               }
+
+.containerr td {
+	  font-weight: normal;
+	  font-size: 1em;
+ 
+                         }
+
+.containerr {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 80%;
+	  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+  border: none;
+  border-spacing: 0;
+  border-collapse:collapse;
+}
+
+.containerr td, .containerr th {
+	  padding-bottom: 2%;
+	  padding-top: 2%;
+  padding-left:2%;  
+}
+tr{
+border-bottom: 1px solid black;
+border-left: 1px solid black;
+border-right: 1px solid black;
+
+}
+/* Background-color of the odd rows */
+.containerr tr:nth-child(odd) {
+	  background-color: #ffffff;
+}
+
+/* Background-color of the even rows */
+.containerr tr:nth-child(even) {
+	  background-color: #FFFFFF;
+}
+
+.containerr th {
+	  background-color: #3b99e0;
+}
+
+.containerr td:first-child { color: #26164E; font-weight:bold }
+
+.containerr tr:hover {
+   background-color: #FFF;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+table{
+  border-color: transparent !important;
+  border-spacing: 0;
+}
+
+.containerr td:hover {
+  background-color: #ED4B4B;
+  
+  color: #FFF;
+  font-weight: bold;
+  
+  box-shadow: #FFF -1px 1px, #FFF -2px 2px, #FFF -3px 3px, #FFF -4px 4px, #FFF -5px 5px, #FFF -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+	  transition-duration: 0.3s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+
+@media (max-width: 800px) {
+.container td:nth-child(4),
+.container th:nth-child(4) { display: none; 
+}
+
+
+}
+
+
+.tab{
+  background-color: black;
+  color: white;
+  width: 80%;
+  margin:0 auto;
+}
+
+.text-info{
+  color: white !important;
+  text-shadow: 0 0 5px #296dff; 
+}
+
+
+.text-infoo{
+  color: #3b99e0;
+}
+@media (max-width:370px){
+  .tab{
+    background-color: black;
+    color: white;
+    width: 95%;
+    margin:0 auto;
+  }
+}
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+.maincontainer{
+  position: initial;
+  width: 250px;
+  height: 270px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  flex-wrap: wrap;
+ 
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+  display: inline-block;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #ED4B4B;
+  color: #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+ 
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #3b99e0;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.desc{
+  font-size: 14px !important;
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: white
+}
+
+.thefront p, .theback p{
+  
+  padding: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: justify;
+  color:white;
+}
+/*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+
+.flip{
+  margin-bottom: 30px;
+}
+
+
+
+
+@media (max-width:800px){
+  .flip{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+  }
+  .maincontainer{
+    margin-left: 15%;
+  }
+}
+
+
+@media (min-width:800px){
+  .flip{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    justify-content: space-evenly;
+    
+  }
+  .maincontainer{
+    margin-left: 20%;
+  }
+}
